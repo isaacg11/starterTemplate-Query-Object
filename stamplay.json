@@ -1,0 +1,10 @@
+{
+  "appId": "sdkqueryobject",
+  "apiKey": "42a27f9a62e9885eea7548505bde0855558b3d3de945c0b6fb0885f4bde63bb6",
+  "public": "./",
+  "ignore": [
+    "stamplay.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
