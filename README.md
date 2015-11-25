@@ -1,7 +1,7 @@
 # starterTemplate-Query-Object
-a starter template for running object queries using the Stamplay SDK
+a Javascript starter template for running object queries using the Stamplay SDK
 
-**CLONING: When cloning this repo, you must switch out the appId with your own to make it work.**
+**CLONING: When cloning this repo, you must initialize your app first to make it work.**
 
  1) **Initialize the front-end of your app with Stamplay**
  <br>
@@ -24,7 +24,7 @@ Stamplay.init('yourAppId');
 ```
 3) **Establish query search**
 - Go to your Stamplay editor and go to the **Data** section. Then go to **Objects**
-- Establish what object(s) in the collection your going to query by looking at it's property **names & values**.
+- Establish which object(s) in the collection your going to query by looking at it's property **names & values**.
 
 4) **Query Object**
 ```
@@ -32,8 +32,8 @@ function queryObject(){
  	var cars = document.getElementById("cars");
  	var selectedCar = cars.options[cars.selectedIndex].value;
 
-	var objectCollection = new Stamplay.Cobject('object').Collection;
-	objectCollection.equalTo("brand", selectedCar).fetch().then(function(res) {
+	var objectCollection = new Stamplay.Cobject('objectModel').Collection;
+	objectCollection.equalTo("property", selectedCar).fetch().then(function(res) {
 		alert(objectCollection.instance[0].instance.brand);
 	});
 }
